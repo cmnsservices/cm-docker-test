@@ -1,0 +1,24 @@
+- pipeline: sdfsdfsdf
+  events:
+  - type: PUSH
+    refs:
+    - :default
+  fail_on_prepare_env_warning: true
+  actions:
+  - action: echo $BUDDY
+    type: BUILD
+    docker_image_name: library/ubuntu
+    docker_image_tag: 20.04
+    execute_commands:
+    - echo $TEST
+    shell: BASH
+  - action: Sleep 10 seconds
+    type: SLEEP
+    sleep_in_sec: 10
+  - action: echo $TEST
+    type: BUILD
+    docker_image_name: library/ubuntu
+    docker_image_tag: 20.04
+    execute_commands:
+    - echo $TEST
+    shell: BASH
