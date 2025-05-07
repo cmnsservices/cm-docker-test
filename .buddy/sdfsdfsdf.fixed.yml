@@ -12,6 +12,7 @@
     execute_commands:
     - echo $TEST
     - echo $BUDDY
+    - echo $BUDDY_RUNNERS
     shell: BASH
   - action: Sleep 10 seconds
     type: SLEEP
