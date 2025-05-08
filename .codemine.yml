@@ -1,0 +1,21 @@
+version: 1.0
+stages:
+- one
+
+jobs:
+  cm1:
+    type: custom-container
+    stage: one
+    parameters: 
+      scripts: 
+      - ls
+      - pwd
+      - echo $CM_TRIGGER_PAYLOAD
+      
+      image: 
+        path: alpine:latest
+        shell: bash
+        type: CodeMine
+        integration: 
+        resetEntryPoint: 
+        publicImage: 
